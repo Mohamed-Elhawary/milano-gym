@@ -35,6 +35,7 @@ let pageHeader       = document.querySelector("header.page__header"),
     offersSpecs      = document.querySelector(".offers .offers-specs"),
     topfooter        = document.querySelector("footer.page__footer .top-footer");
 
+const Fragment = document.createDocumentFragment();
 var time;
 /**
  * End Global Variables
@@ -63,6 +64,13 @@ function scrollTo(element) {
       behavior: 'smooth',
       left: 0,
       top: element.offsetTop
+    });
+}
+
+// Set multiple attributes for an element
+function setAttributes(element, attributes) {
+    Object.keys(attributes).forEach(attribute => {
+      element.setAttribute(attribute, attributes[attribute]);
     });
 }
 
@@ -97,13 +105,55 @@ function check() {
 }
 
 check();
+
+// Build the navbar as anchors for each section existed in the page
+// First Way: using appendChild, createElement & Fragment (for Best Performance)
+function buildNav() {
+    let listItem,
+        anchor;
+    allSections.forEach(section => {
+        listItem = document.createElement("li");
+        anchor   = document.createElement("a");
+        setAttributes(anchor, {
+            href: "#",
+            class: "menu__link transition",
+            "data-scroll": `#${section.getAttribute("id")}`
+        });
+        anchor.innerText = `${section.getAttribute("id")}`;
+        listItem.appendChild(anchor);
+        Fragment.appendChild(listItem);
+    });
+
+    let ClonedFragment = Fragment.cloneNode(true);
+    for(let i = 0; i < navList.length; i++) {
+        navList[0].appendChild(Fragment);
+        navList[1].appendChild(ClonedFragment);
+    }
+}
+
+buildNav();
+
+// Build the navbar as anchors for each section existed in the page
+// Second Way: using innerHtml & Template Literals (Not Best for Performance)
+/*function buildNav() {
+    let html;
+    allSections.forEach(section => {
+        html = `<li><a href="#" data-scroll="#${section.getAttribute("id")}" class="menu__link transition">${section.getAttribute("id")}</a></li>`
+        navList.forEach(list => {
+            list.innerHTML += html;
+        });
+    });
+}
+
+buildNav();*/
+
 /**
  * End Main Functions
  * Begin Events
  * 
 */
 
-// build the nav (on click event for navbar anchor)
+// when clicking on a navbar anchor
 navList.forEach(list => {
     list.addEventListener("click", (e) => {
         if(e.target.nodeName === "A") {
@@ -127,7 +177,6 @@ navList.forEach(list => {
         }
     });
 });
-
 
 // Synchronous nav while scrolling
 window.addEventListener("scroll", () => {
@@ -154,7 +203,7 @@ window.addEventListener("scroll", () => {
         }
     }
 
-    // Control the visability of to top button
+    // Control the visability of the to top button
     if (window.pageYOffset >= 800) {
         toTopButton.style.display = "block";
     } else {
@@ -162,7 +211,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// When clicking in the right arrow of the customers slider
+// When clicking on the right arrow of the customers slider
 rightArrow.addEventListener("click", () => {
     activeOpinion.classList.remove("active");
     let nextActive = activeOpinion.parentElement.nextElementSibling.firstElementChild;
