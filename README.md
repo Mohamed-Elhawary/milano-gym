@@ -2,7 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d953de8d-576e-49e3-b842-6ff8fcc8c18e/deploy-status)](https://app.netlify.com/sites/milanogym/deploys)
 
-One HTML5 Responsive Landing Page Template Project for a Gym. 
+One HTML5 Landing Page Template Project for a Gym. 
+(Responsive)
 
 ![Screenshot](mockup.png)  
 
