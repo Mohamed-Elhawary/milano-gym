@@ -2,8 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d953de8d-576e-49e3-b842-6ff8fcc8c18e/deploy-status)](https://app.netlify.com/sites/milanogym/deploys)  
 
-One HTML5 landing page template for a gym.  
-(Responsive)
+Milano Gym is a landing page website for a Gym.
 
 ![Screenshot](mockup.png)  
 
