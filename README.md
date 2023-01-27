@@ -4,25 +4,19 @@
 
 Milano Gym is a landing page website for a Gym.
 
+You can view the website from [here](https://milanogym.netlify.app/)
+
 ![Screenshot](mockup.png)  
 
 ## Demo
  
 ![milano-gym-google-chrome-2020-11-min](https://user-images.githubusercontent.com/69651552/98614657-92d05b80-2301-11eb-8743-1cf475f6b18e.gif)  
 
-## Getting Started
-
-You can try the Template from [here](https://milanogym.netlify.app/)
-
-## Prerequisites
-
-Just Modern Browser like "Chrome" and a Code Editor for Deployment and Develop.  
-
 ## Built With
 
 * HTML5
 * CSS3
-* Pure JS version ES2015/ES6  
+* Vanilla JS 
 
 ## Libraries  
 
@@ -31,34 +25,27 @@ Just Modern Browser like "Chrome" and a Code Editor for Deployment and Develop.
 ## Frameworks 
 
 * [Bootstrap 4](https://getbootstrap.com/)
-
 * [FastHelpers Framework [FHF]](https://github.com/Mohamed-Elhawary/fasthelpers-framework-fhf)
-
-## Google Fonts  
-
-* [Merriweather](https://fonts.google.com/specimen/Merriweather) 
 
 ## Author
 
-* Mohamed Elhawary  
+* [Mohamed Elhawary](https://www.linkedin.com/in/mohamed-elhawary14/)
 
-## Contact Me by my Social Accounts
+## Contact me through my social accounts
 
-* Email: mohamed.k.elhawary@gmail.com  
-
-* [Linkedin](https://www.linkedin.com/in/mohamed-elhawary14/)
-
-* [Codepen](https://codepen.io/Mohamed-ElHawary)
-
+* Email: mohamed.k.elhawary@gmail.com
+* [LinkedIn](https://www.linkedin.com/in/mohamed-elhawary14/)
+* [Github](https://github.com/Mohamed-Elhawary)  
 * [Behance](https://www.behance.net/mohamed-elhawary14)
-
-## Deploy with Me
-
-Feel Free to Deploy it with me, send Issues or a Pull Request and i'll deal with you, just test it First.
+* [Codepen](https://codepen.io/Mohamed-ElHawary) 
 
 ## Notices
 
-- This Template is a Practical Landing Page Project from Udacity Nanodegree Program in the Field of Web Development Professional Track.
+- This website is a practical project from Udacity Course [Nanodegree Program - Web Development Professional Track](https://www.udacity.com/course/intro-to-programming-nanodegree--nd000)
+
+## Certificate
+
+[Course Certificate](Certificate.pdf)
 
 ## License
 
